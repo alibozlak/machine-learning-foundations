@@ -2,20 +2,14 @@ package dev.bozlak.regression.linear.singlevariable;
 
 import java.util.ArrayList;
 
-public class SingleVariableLinearRegression {
+public class DataSetForSingleVariableLinearRegression {
     private ArrayList<Double> inputs;
     private ArrayList<Double> labels;
     private int m;
     public Model function = (w, b, x) -> w * x + b;
 
-    public SingleVariableLinearRegression(ArrayList<Double> inputs, ArrayList<Double> labels) throws Exception {
+    public DataSetForSingleVariableLinearRegression(ArrayList<Double> inputs, ArrayList<Double> labels) throws Exception {
         this.areInputsAndLabelsSameSize(inputs, labels);
-    }
-
-    public SingleVariableLinearRegression(ArrayList<Double> inputs, ArrayList<Double> labels, Model function)
-            throws Exception {
-        this.areInputsAndLabelsSameSize(inputs, labels);
-        this.function = function;
     }
 
     public ArrayList<Double> getInputs() {
@@ -60,9 +54,6 @@ public class SingleVariableLinearRegression {
         public WeightAndBias(double weight, double bias){
             this.weight = weight;
             this.bias = bias;
-        }
-
-        public WeightAndBias() {
         }
     }
 
